@@ -8,7 +8,7 @@
 		"ghcr.io/swift-server-community/swift-devcontainer-features/sqlite:1": {},
 		"ghcr.io/brokeyourbike/devcontainer-features/mockery-go:0": {},
 		"ghcr.io/mrsimonemms/devcontainers/cobra-cli:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -17,7 +17,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "go version",
+	"postCreateCommand": "go install github.com/spf13/cobra-cli@latest && go install go.uber.org/mock/mockgen@latest"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
